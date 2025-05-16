@@ -13,10 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{94f8921f-9fce-48e5-bedb-3dd56e10d92a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Particle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SandParticle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Grid.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="SandParticle.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
