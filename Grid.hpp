@@ -35,4 +35,5 @@ private:
 	//All particles will have their own behaviours
 	void updateSnow(int x, int y);
 	void updateSand(int x, int y);
+	void updateWater(int x, int y);
 };

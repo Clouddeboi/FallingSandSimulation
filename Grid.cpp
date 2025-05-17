@@ -27,6 +27,9 @@ void Grid::update() {
             case ParticleType::Sand:
                 updateSand(x, y);
                 break;
+            case ParticleType::Water:
+                updateWater(x, y);
+                break;
             default:
                 break;
             }
@@ -82,6 +85,45 @@ void Grid::updateSand(int x, int y) {
             p.type = ParticleType::Empty;
             p.color = sf::Color::Black;
         }
+    }
+}
+
+void Grid::updateWater(int x, int y) {
+    Particle& p = particles[y][x];
+
+    //Check directly below
+    if (y + 1 < height && particles[y + 1][x].type == ParticleType::Empty) {
+        particles[y + 1][x] = p;
+        p = Particle(); //Set current to empty
+        return;
+    }
+
+    //Check bottom-left
+    if (x > 0 && y + 1 < height && particles[y + 1][x - 1].type == ParticleType::Empty) {
+        particles[y + 1][x - 1] = p;
+        p = Particle();
+        return;
+    }
+
+    //Check bottom-right
+    if (x < width - 1 && y + 1 < height && particles[y + 1][x + 1].type == ParticleType::Empty) {
+        particles[y + 1][x + 1] = p;
+        p = Particle();
+        return;
+    }
+
+    //Check left
+    if (x > 0 && particles[y][x - 1].type == ParticleType::Empty) {
+        particles[y][x - 1] = p;
+        p = Particle();
+        return;
+    }
+
+    //Check right
+    if (x < width - 1 && particles[y][x + 1].type == ParticleType::Empty) {
+        particles[y][x + 1] = p;
+        p = Particle();
+        return;
     }
 }
 
