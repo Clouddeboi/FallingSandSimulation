@@ -25,6 +25,8 @@ int main() {
             grid.setParticle(gridX, gridY, ParticleType::Sand);
         }
 
+        grid.update();
+
         window.clear();
         grid.draw(window);
         window.display();

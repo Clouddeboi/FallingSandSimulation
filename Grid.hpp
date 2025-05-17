@@ -10,6 +10,9 @@ public:
 	//Constructor
 	Grid(int width, int height, int particleSize);
 
+	//Method that will update every frame
+	void update();
+
 	//Draw all particles to the window
 	void draw(sf::RenderWindow& window);
 	//Set a particle at grid Coords

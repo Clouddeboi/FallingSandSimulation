@@ -14,6 +14,39 @@ int Grid::getParticleSize() const {
     return particleSize;
 }
 
+//Update Method
+void Grid::update() {
+    //starts from the bottom
+    for (int y = height - 2; y >= 0; --y) {
+        for (int x = 0; x < width; ++x) {
+            Particle& p = particles[y][x];
+            if (p.type == ParticleType::Sand) {
+                Particle& below = particles[y + 1][x];
+                if (below.type == ParticleType::Empty) {
+                    //Move the particles downwards
+                    below = p;
+                    p.type = ParticleType::Empty;
+                    p.color = sf::Color::Black;
+                }
+                else {
+                    //try down left direction
+                    if (x > 0 && particles[y + 1][x - 1].type == ParticleType::Empty) {
+                        particles[y + 1][x - 1] = p;
+                        p.type = ParticleType::Empty;
+                        p.color = sf::Color::Black;
+                    }
+                    //try down right direction
+                    else if (x < width - 1 && particles[y + 1][x + 1].type == ParticleType::Empty) {
+                        particles[y + 1][x + 1] = p;
+                        p.type = ParticleType::Empty;
+                        p.color = sf::Color::Black;
+                    }
+                }
+            }
+        }
+    }
+}
+
 //Draw function that loops through the grid and draws each particle as a square
 void Grid::draw(sf::RenderWindow& window) {
     for (int y = 0; y < height; ++y) {

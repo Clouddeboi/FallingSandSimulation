@@ -7,8 +7,8 @@ bool InputHandler::getSandPlacement(int& outGridX, int& outGridY) {
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
 		sf::Vector2i mousePos = sf::Mouse::getPosition(window);
 
-		outGridX = mousePos.x / 8;
-		outGridY = mousePos.y / 8;
+		outGridX = mousePos.x / pixelSize;
+		outGridY = mousePos.y / pixelSize;
 
 		return true;
 	}
