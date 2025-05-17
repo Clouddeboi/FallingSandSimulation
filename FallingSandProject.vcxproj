@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="SandParticle.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -159,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Grid.hpp" />
+    <ClInclude Include="InputHandler.hpp" />
     <ClInclude Include="Particle.hpp" />
     <ClInclude Include="SandParticle.hpp" />
     <ClInclude Include="Utils.hpp" />
