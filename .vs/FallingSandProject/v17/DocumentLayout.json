@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3328A6BC-9642-4F82-B947-02BE683CC99E}|FallingSandProject.vcxproj|C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\Particle.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3328A6BC-9642-4F82-B947-02BE683CC99E}|FallingSandProject.vcxproj|solutionrelative:Particle.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3328A6BC-9642-4F82-B947-02BE683CC99E}|FallingSandProject.vcxproj|C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3328A6BC-9642-4F82-B947-02BE683CC99E}|FallingSandProject.vcxproj|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Particle.hpp",
+              "DocumentMoniker": "C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\Particle.hpp",
+              "RelativeDocumentMoniker": "Particle.hpp",
+              "ToolTip": "C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\Particle.hpp",
+              "RelativeToolTip": "Particle.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-16T23:55:11.342Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -26,7 +43,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\src\\main.cpp",
               "RelativeDocumentMoniker": "src\\main.cpp",
