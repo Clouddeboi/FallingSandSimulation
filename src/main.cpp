@@ -25,9 +25,13 @@ int main() {
 
         input.update();
 
+        if (input.shouldClearGrid()) {
+            grid.clear();
+        }
+
         if (input.getParticlePlacement(gridX, gridY, placingType)) {
             if (placingType == ParticleType::Sand) {
-                // Place Sand in a 3x3 grid
+                //Place Sand in a 3x3 grid
                 for (int dy = -1; dy <= 1; ++dy) {
                     for (int dx = -1; dx <= 1; ++dx) {
                         int x = gridX + dx;
@@ -40,7 +44,7 @@ int main() {
                 }
             }
             else if (placingType == ParticleType::Water) {
-                // Place Water in a circular area only on EMPTY cells
+                //Place Water in a circular area only on empty cells
                 for (int dy = -2; dy <= 2; ++dy) {
                     for (int dx = -2; dx <= 2; ++dx) {
                         if (dx * dx + dy * dy <= 4) {

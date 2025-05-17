@@ -34,4 +34,15 @@ void InputHandler::handleKeyboardInput() {
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3)) {
 		currentParticleType = ParticleType::Snow;
 	}
+
+	// Check if spacebar is just pressed
+	static bool wasSpacePressed = false;
+	bool isSpacePressed = sf::Keyboard::isKeyPressed(sf::Keyboard::Space);
+
+	clearPressed = isSpacePressed && !wasSpacePressed;
+	wasSpacePressed = isSpacePressed;
+}
+
+bool InputHandler::shouldClearGrid() const {
+	return clearPressed;
 }

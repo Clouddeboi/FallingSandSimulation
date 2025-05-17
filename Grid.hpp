@@ -25,6 +25,9 @@ public:
 	//Returns the type of particle at a given grid coordinate
 	ParticleType getParticleType(int x, int y) const;
 
+	//Clears all particles
+	void clear();
+
 private:
 	int width, height;//Grid size (in particles)
 	int particleSize;//Size of each particle(square in pixels)

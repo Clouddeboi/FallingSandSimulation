@@ -14,9 +14,12 @@ public:
 
 	void update();
 
+	bool shouldClearGrid() const;
+
 private:
 	sf::RenderWindow& window;
 	int pixelSize;
+	bool clearPressed = false;
 
 	ParticleType currentParticleType = ParticleType::Sand;
 

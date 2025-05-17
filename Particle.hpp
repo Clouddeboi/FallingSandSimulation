@@ -5,8 +5,8 @@
 enum class ParticleType {
 	Empty, //Empty Particle
 	Sand, //Sand Particle
-	Water,
-	Snow,
+	Water, //Water Particle
+	Snow, //Snow Particle
 };
 
 //This Represents a single particle in the grid

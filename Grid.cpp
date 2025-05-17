@@ -203,3 +203,11 @@ void Grid::setParticle(int x, int y, ParticleType type) {
     }
 }
 
+void Grid::clear() {
+    for (int y = 0; y < height; ++y) {
+        for (int x = 0; x < width; ++x) {
+            particles[y][x] = Particle(); //resets to empty particle
+        }
+    }
+}
+
