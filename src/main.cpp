@@ -27,7 +27,7 @@ int main() {
 
         if (input.getParticlePlacement(gridX, gridY, placingType)) {
             if (placingType == ParticleType::Sand) {
-                //Place Sand in a 3x3 grid
+                // Place Sand in a 3x3 grid
                 for (int dy = -1; dy <= 1; ++dy) {
                     for (int dx = -1; dx <= 1; ++dx) {
                         int x = gridX + dx;
@@ -40,11 +40,10 @@ int main() {
                 }
             }
             else if (placingType == ParticleType::Water) {
-                //Place Water in a circular shape (radius = 2)
-                int radius = 2;
-                for (int dy = -radius; dy <= radius; ++dy) {
-                    for (int dx = -radius; dx <= radius; ++dx) {
-                        if (dx * dx + dy * dy <= radius * radius) {
+                // Place Water in a circular area only on EMPTY cells
+                for (int dy = -2; dy <= 2; ++dy) {
+                    for (int dx = -2; dx <= 2; ++dx) {
+                        if (dx * dx + dy * dy <= 4) {
                             int x = gridX + dx;
                             int y = gridY + dy;
 
@@ -56,13 +55,12 @@ int main() {
                 }
             }
             else {
-                //For other particles, place only if the current cell is empty
+                // For other particles, place only on empty cells
                 if (grid.getParticleType(gridX, gridY) == ParticleType::Empty) {
                     grid.setParticle(gridX, gridY, placingType);
                 }
             }
         }
-
 
         //Calling update multiple times
         //This increases the "Speed of hpw the particles fall"

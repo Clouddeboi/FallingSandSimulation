@@ -66,24 +66,28 @@ void Grid::updateSnow(int x, int y) {
 }
 
 void Grid::updateSand(int x, int y) {
+    if (y + 1 >= height) return; //Out of bounds check
+
     Particle& p = particles[y][x];
     Particle& below = particles[y + 1][x];
 
     if (below.type == ParticleType::Empty) {
         below = p;
-        p.type = ParticleType::Empty;
-        p.color = sf::Color::Black;
+        p = Particle(); //Reset to empty
+    }
+    else if (below.type == ParticleType::Water) {
+        // Swap sand and water
+        swap(p, below);
     }
     else {
-        if (x > 0 && particles[y + 1][x - 1].type == ParticleType::Empty) {
+        //Try diagonal movement
+        if (x > 0 && y + 1 < height && particles[y + 1][x - 1].type == ParticleType::Empty) {
             particles[y + 1][x - 1] = p;
-            p.type = ParticleType::Empty;
-            p.color = sf::Color::Black;
+            p = Particle();
         }
-        else if (x < width - 1 && particles[y + 1][x + 1].type == ParticleType::Empty) {
+        else if (x < width - 1 && y + 1 < height && particles[y + 1][x + 1].type == ParticleType::Empty) {
             particles[y + 1][x + 1] = p;
-            p.type = ParticleType::Empty;
-            p.color = sf::Color::Black;
+            p = Particle();
         }
     }
 }
