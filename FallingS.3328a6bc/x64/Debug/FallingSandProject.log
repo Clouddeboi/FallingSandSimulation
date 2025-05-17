@@ -1,2 +1,16 @@
-﻿  main.cpp
+﻿  Grid.cpp
+C:\Users\micha\Documents\GameDevPortfolioFiles\Projects\VisualStudio\FallingSand\FallingSandProject\FallingSandSimulation\Grid.cpp(64,65): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\micha\Documents\GameDevPortfolioFiles\Projects\VisualStudio\FallingSand\FallingSandProject\FallingSandSimulation\Grid.cpp(64,65): warning C4244:         with
+C:\Users\micha\Documents\GameDevPortfolioFiles\Projects\VisualStudio\FallingSand\FallingSandProject\FallingSandSimulation\Grid.cpp(64,65): warning C4244:         [
+C:\Users\micha\Documents\GameDevPortfolioFiles\Projects\VisualStudio\FallingSand\FallingSandProject\FallingSandSimulation\Grid.cpp(64,65): warning C4244:             T=float
+C:\Users\micha\Documents\GameDevPortfolioFiles\Projects\VisualStudio\FallingSand\FallingSandProject\FallingSandSimulation\Grid.cpp(64,65): warning C4244:         ]
+C:\Users\micha\Documents\GameDevPortfolioFiles\Projects\VisualStudio\FallingSand\FallingSandProject\FallingSandSimulation\Grid.cpp(64,51): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\micha\Documents\GameDevPortfolioFiles\Projects\VisualStudio\FallingSand\FallingSandProject\FallingSandSimulation\Grid.cpp(64,51): warning C4244:         with
+C:\Users\micha\Documents\GameDevPortfolioFiles\Projects\VisualStudio\FallingSand\FallingSandProject\FallingSandSimulation\Grid.cpp(64,51): warning C4244:         [
+C:\Users\micha\Documents\GameDevPortfolioFiles\Projects\VisualStudio\FallingSand\FallingSandProject\FallingSandSimulation\Grid.cpp(64,51): warning C4244:             T=float
+C:\Users\micha\Documents\GameDevPortfolioFiles\Projects\VisualStudio\FallingSand\FallingSandProject\FallingSandSimulation\Grid.cpp(64,51): warning C4244:         ]
+C:\Users\micha\Documents\GameDevPortfolioFiles\Projects\VisualStudio\FallingSand\FallingSandProject\FallingSandSimulation\Grid.cpp(66,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\micha\Documents\GameDevPortfolioFiles\Projects\VisualStudio\FallingSand\FallingSandProject\FallingSandSimulation\Grid.cpp(66,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  main.cpp
+  Generating Code...
   FallingSandProject.vcxproj -> C:\Users\micha\Documents\GameDevPortfolioFiles\Projects\VisualStudio\FallingSand\FallingSandProject\FallingSandSimulation\x64\Debug\FallingSandProject.exe

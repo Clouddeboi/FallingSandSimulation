@@ -27,4 +27,8 @@ private:
 	int particleSize;//Size of each particle(square in pixels)
 
 	vector<vector<Particle>> particles;//2D Grid of particles
+
+	//More particles!
+	//All particles will have their own behaviours
+	void updateSand(int x, int y);
 };

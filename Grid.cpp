@@ -16,33 +16,40 @@ int Grid::getParticleSize() const {
 
 //Update Method
 void Grid::update() {
-    //starts from the bottom
     for (int y = height - 2; y >= 0; --y) {
         for (int x = 0; x < width; ++x) {
             Particle& p = particles[y][x];
-            if (p.type == ParticleType::Sand) {
-                Particle& below = particles[y + 1][x];
-                if (below.type == ParticleType::Empty) {
-                    //Move the particles downwards
-                    below = p;
-                    p.type = ParticleType::Empty;
-                    p.color = sf::Color::Black;
-                }
-                else {
-                    //try down left direction
-                    if (x > 0 && particles[y + 1][x - 1].type == ParticleType::Empty) {
-                        particles[y + 1][x - 1] = p;
-                        p.type = ParticleType::Empty;
-                        p.color = sf::Color::Black;
-                    }
-                    //try down right direction
-                    else if (x < width - 1 && particles[y + 1][x + 1].type == ParticleType::Empty) {
-                        particles[y + 1][x + 1] = p;
-                        p.type = ParticleType::Empty;
-                        p.color = sf::Color::Black;
-                    }
-                }
+
+            switch (p.type) {
+            case ParticleType::Sand:
+                updateSand(x, y);
+                break;
+            default:
+                break;
             }
+        }
+    }
+}
+
+void Grid::updateSand(int x, int y) {
+    Particle& p = particles[y][x];
+    Particle& below = particles[y + 1][x];
+
+    if (below.type == ParticleType::Empty) {
+        below = p;
+        p.type = ParticleType::Empty;
+        p.color = sf::Color::Black;
+    }
+    else {
+        if (x > 0 && particles[y + 1][x - 1].type == ParticleType::Empty) {
+            particles[y + 1][x - 1] = p;
+            p.type = ParticleType::Empty;
+            p.color = sf::Color::Black;
+        }
+        else if (x < width - 1 && particles[y + 1][x + 1].type == ParticleType::Empty) {
+            particles[y + 1][x + 1] = p;
+            p.type = ParticleType::Empty;
+            p.color = sf::Color::Black;
         }
     }
 }
