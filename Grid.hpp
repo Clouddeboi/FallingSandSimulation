@@ -12,6 +12,8 @@ public:
 
 	//Draw all particles to the window
 	void draw(sf::RenderWindow& window);
+	//Set a particle at grid Coords
+	void setParticle(int x, int y, ParticleType type);
 
 private:
 	int width, height;//Grid size (in particles)

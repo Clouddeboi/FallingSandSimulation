@@ -28,3 +28,17 @@ void Grid::draw(sf::RenderWindow& window) {
         }
     }
 }
+
+void Grid::setParticle(int x, int y, ParticleType type) {
+    //Check the grid bounds
+    if (x < 0 || x >= width || y < 0 || y >= height)
+        return;
+
+    particles[y][x].type = type;
+
+    //set the colour based on the type of particle (Sand)
+    if (type == ParticleType::Sand)
+        particles[y][x].color = sf::Color(194, 178, 128);//Sandy Colour?
+    else
+        particles[y][x].color = sf::Color::Black;//Else just make it black
+}
