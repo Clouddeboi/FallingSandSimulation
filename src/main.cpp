@@ -31,13 +31,16 @@ int main() {
 
         //we place a particle in every direction of the actualy particle we are placing
         //this make a 3x3 grid of particles!
-        //if (input.getSandPlacement(gridX, gridY)) {
-        //    for (int dy = -1; dy <= 1; ++dy) {
-        //        for (int dx = -1; dx <= 1; ++dx) {
-        //            grid.setParticle(gridX + dx, gridY + dy, ParticleType::Sand);
-        //        }
-        //    }
-        //}
+        if (input.getParticlePlacement(gridX, gridY, placingType)) {
+            if (placingType == ParticleType::Sand) {
+                //If the particle is sand we loop around in a 3x3 grid around the center piece
+                for (int dy = -1; dy <= 1; ++dy) {
+                    for (int dx = -1; dx <= 1; ++dx) {
+                        grid.setParticle(gridX + dx, gridY + dy, ParticleType::Sand);
+                    }
+                }
+            }
+        }
 
         //Calling update multiple times
         //This increases the "Speed of hpw the particles fall"

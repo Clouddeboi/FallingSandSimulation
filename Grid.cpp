@@ -21,6 +21,9 @@ void Grid::update() {
             Particle& p = particles[y][x];
 
             switch (p.type) {
+            case ParticleType::Snow:
+                updateSnow(x, y);
+                break;
             case ParticleType::Sand:
                 updateSand(x, y);
                 break;
@@ -28,6 +31,34 @@ void Grid::update() {
                 break;
             }
         }
+    }
+}
+
+void Grid::updateSnow(int x, int y) {
+    Particle& p = particles[y][x];
+    //Collect candidate positions to move into
+    vector<pair<int, int>> candidates;
+
+    for (int dy = 1; dy <= 1; ++dy) { //Only one row below
+        for (int dx = -1; dx <= 1; ++dx) {
+            int nx = x + dx;
+            int ny = y + dy;
+
+            //Check bounds
+            if (nx >= 0 && nx < width && ny >= 0 && ny < height) {
+                if (particles[ny][nx].type == ParticleType::Empty) {
+                    candidates.emplace_back(nx, ny);
+                }
+            }
+        }
+    }
+
+    if (!candidates.empty()) {
+        //Pick a random candidate if available and move into for natural spreading
+        auto& pos = candidates[rand() % candidates.size()];
+        particles[pos.second][pos.first] = p;
+        p.type = ParticleType::Empty;
+        p.color = sf::Color::Black;
     }
 }
 
@@ -53,6 +84,7 @@ void Grid::updateSand(int x, int y) {
         }
     }
 }
+
 
 //Draw function that loops through the grid and draws each particle as a square
 void Grid::draw(sf::RenderWindow& window) {
