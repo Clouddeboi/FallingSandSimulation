@@ -3,14 +3,35 @@
 InputHandler::InputHandler(sf::RenderWindow& win, int pSize) 
 	: window(win), pixelSize(pSize) {}
 
-bool InputHandler::getSandPlacement(int& outGridX, int& outGridY) {
+void InputHandler::update() {
+	handleKeyboardInput();
+}
+
+bool InputHandler::getParticlePlacement(int& outGridX, int& outGridY, ParticleType& outType) {
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
 		sf::Vector2i mousePos = sf::Mouse::getPosition(window);
 
 		outGridX = mousePos.x / pixelSize;
 		outGridY = mousePos.y / pixelSize;
+		outType = currentParticleType;
 
 		return true;
 	}
 	return false;
+}
+
+ParticleType InputHandler::getCurrentParticleType() const {
+	return currentParticleType;
+}
+
+void InputHandler::handleKeyboardInput() {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)) {
+		currentParticleType = ParticleType::Sand;
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2)) {
+		currentParticleType = ParticleType::Water;
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3)) {
+		currentParticleType = ParticleType::Snow;
+	}
 }
