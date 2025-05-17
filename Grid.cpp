@@ -85,6 +85,11 @@ void Grid::updateSand(int x, int y) {
     }
 }
 
+ParticleType Grid::getParticleType(int x, int y) const {
+    if (x < 0 || x >= width || y < 0 || y >= height)
+        return ParticleType::Empty; //Treat out of bounds as an empty
+    return particles[y][x].type;
+}
 
 //Draw function that loops through the grid and draws each particle as a square
 void Grid::draw(sf::RenderWindow& window) {

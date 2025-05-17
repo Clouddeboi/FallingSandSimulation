@@ -26,18 +26,23 @@ int main() {
         input.update();
 
         if (input.getParticlePlacement(gridX, gridY, placingType)) {
-            grid.setParticle(gridX, gridY, placingType);
-        }
-
-        //we place a particle in every direction of the actualy particle we are placing
-        //this make a 3x3 grid of particles!
-        if (input.getParticlePlacement(gridX, gridY, placingType)) {
             if (placingType == ParticleType::Sand) {
-                //If the particle is sand we loop around in a 3x3 grid around the center piece
+                //Place Sand in a 3x3 grid
                 for (int dy = -1; dy <= 1; ++dy) {
                     for (int dx = -1; dx <= 1; ++dx) {
-                        grid.setParticle(gridX + dx, gridY + dy, ParticleType::Sand);
+                        int x = gridX + dx;
+                        int y = gridY + dy;
+
+                        if (grid.getParticleType(x, y) == ParticleType::Empty) {
+                            grid.setParticle(x, y, ParticleType::Sand);
+                        }
                     }
+                }
+            }
+            else {
+                //For other particles, place only if the current cell is empty
+                if (grid.getParticleType(gridX, gridY) == ParticleType::Empty) {
+                    grid.setParticle(gridX, gridY, placingType);
                 }
             }
         }

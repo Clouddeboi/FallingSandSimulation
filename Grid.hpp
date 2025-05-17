@@ -22,6 +22,9 @@ public:
 	//this is so we can easily assign the particle size inside of the input handler
 	int getParticleSize() const;
 
+	//Returns the type of particle at a given grid coordinate
+	ParticleType getParticleType(int x, int y) const;
+
 private:
 	int width, height;//Grid size (in particles)
 	int particleSize;//Size of each particle(square in pixels)
