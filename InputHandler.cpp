@@ -1,6 +1,7 @@
 #include "InputHandler.hpp"
 
-InputHandler::InputHandler(sf::RenderWindow& win) : window(win) {}
+InputHandler::InputHandler(sf::RenderWindow& win, int pSize) 
+	: window(win), pixelSize(pSize) {}
 
 bool InputHandler::getSandPlacement(int& outGridX, int& outGridY) {
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {

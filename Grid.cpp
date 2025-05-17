@@ -10,6 +10,10 @@ Grid::Grid(int width, int height, int particleSize)
     particles = vector<vector<Particle>>(height, vector<Particle>(width));
 }
 
+int Grid::getParticleSize() const {
+    return particleSize;
+}
+
 //Draw function that loops through the grid and draws each particle as a square
 void Grid::draw(sf::RenderWindow& window) {
     for (int y = 0; y < height; ++y) {

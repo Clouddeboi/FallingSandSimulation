@@ -9,7 +9,9 @@ int main() {
     //Each particle in this case is 8x8 pixels sowe create a 100x100 grid
     //to match our render window
     Grid grid(100, 100, 8);
-    InputHandler input(window); //Create input handler
+
+    //Create input handler & get the particle size from the grid
+    InputHandler input(window, grid.getParticleSize());
 
     while (window.isOpen()) {
         sf::Event event;

@@ -15,6 +15,10 @@ public:
 	//Set a particle at grid Coords
 	void setParticle(int x, int y, ParticleType type);
 
+	//Getter for the particle size, 
+	//this is so we can easily assign the particle size inside of the input handler
+	int getParticleSize() const;
+
 private:
 	int width, height;//Grid size (in particles)
 	int particleSize;//Size of each particle(square in pixels)

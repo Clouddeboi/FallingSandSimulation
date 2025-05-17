@@ -3,7 +3,7 @@
 
 class InputHandler {
 public:
-	InputHandler(sf::RenderWindow& window);
+	InputHandler(sf::RenderWindow& window, int particleSize);
 
 	//Returns true if a particle should be placed on this frame
 	//outputs the grid coords to place it on
@@ -11,4 +11,5 @@ public:
 
 private:
 	sf::RenderWindow& window;
+	int pixelSize;
 };
