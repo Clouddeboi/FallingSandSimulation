@@ -21,11 +21,22 @@ int main() {
         }
 
         int gridX, gridY;
+
+        //we place a particle in every direction of the actualy particle we are placing
+        //this make a 3x3 grid of particles!
         if (input.getSandPlacement(gridX, gridY)) {
-            grid.setParticle(gridX, gridY, ParticleType::Sand);
+            for (int dy = -1; dy <= 1; ++dy) {
+                for (int dx = -1; dx <= 1; ++dx) {
+                    grid.setParticle(gridX + dx, gridY + dy, ParticleType::Sand);
+                }
+            }
         }
 
-        grid.update();
+        //Calling update multiple times
+        //This increases the "Speed of hpw the particles fall"
+        for (int i = 0; i < 2.5; ++i) {
+            grid.update();
+        }
 
         window.clear();
         grid.draw(window);
