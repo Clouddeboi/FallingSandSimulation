@@ -96,24 +96,49 @@ void Grid::updateWater(int x, int y) {
     Particle& p = particles[y][x];
 
     //Check directly below
-    if (y + 1 < height && particles[y + 1][x].type == ParticleType::Empty) {
-        particles[y + 1][x] = p;
-        p = Particle(); //Set current to empty
-        return;
+    if (y + 1 < height) {
+        Particle& below = particles[y + 1][x];
+
+        if (below.type == ParticleType::Empty) {
+            below = p;
+            p = Particle();
+            return;
+        }
+        else if (below.type == ParticleType::Snow) {
+            below = p;//Replace snow with water
+            p = Particle();//Remove water from current
+            return;
+        }
     }
 
     //Check bottom-left
-    if (x > 0 && y + 1 < height && particles[y + 1][x - 1].type == ParticleType::Empty) {
-        particles[y + 1][x - 1] = p;
-        p = Particle();
-        return;
+    if (x > 0 && y + 1 < height) {
+        Particle& bottomLeft = particles[y + 1][x - 1];
+        if (bottomLeft.type == ParticleType::Empty) {
+            bottomLeft = p;
+            p = Particle();
+            return;
+        }
+        else if (bottomLeft.type == ParticleType::Snow) {
+            bottomLeft = p;
+            p = Particle();
+            return;
+        }
     }
 
     //Check bottom-right
-    if (x < width - 1 && y + 1 < height && particles[y + 1][x + 1].type == ParticleType::Empty) {
-        particles[y + 1][x + 1] = p;
-        p = Particle();
-        return;
+    if (x < width - 1 && y + 1 < height) {
+        Particle& bottomRight = particles[y + 1][x + 1];
+        if (bottomRight.type == ParticleType::Empty) {
+            bottomRight = p;
+            p = Particle();
+            return;
+        }
+        else if (bottomRight.type == ParticleType::Snow) {
+            bottomRight = p;
+            p = Particle();
+            return;
+        }
     }
 
     //Check left

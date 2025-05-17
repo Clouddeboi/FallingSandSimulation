@@ -64,7 +64,7 @@ int main() {
 
         //Calling update multiple times
         //This increases the "Speed of hpw the particles fall"
-        for (int i = 0; i < 2.5; ++i) {
+        for (int i = 0; i < 2; ++i) {
             grid.update();
         }
 

@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{3328A6BC-9642-4F82-B947-02BE683CC99E}|FallingSandProject.vcxproj|solutionrelative:Grid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3328A6BC-9642-4F82-B947-02BE683CC99E}|FallingSandProject.vcxproj|C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\Particle.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3328A6BC-9642-4F82-B947-02BE683CC99E}|FallingSandProject.vcxproj|solutionrelative:Particle.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3328A6BC-9642-4F82-B947-02BE683CC99E}|FallingSandProject.vcxproj|C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\Grid.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3328A6BC-9642-4F82-B947-02BE683CC99E}|FallingSandProject.vcxproj|solutionrelative:Grid.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3328A6BC-9642-4F82-B947-02BE683CC99E}|FallingSandProject.vcxproj|C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\InputHandler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3328A6BC-9642-4F82-B947-02BE683CC99E}|FallingSandProject.vcxproj|solutionrelative:InputHandler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3328A6BC-9642-4F82-B947-02BE683CC99E}|FallingSandProject.vcxproj|C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\Particle.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3328A6BC-9642-4F82-B947-02BE683CC99E}|FallingSandProject.vcxproj|solutionrelative:Particle.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "src\\main.cpp",
               "ToolTip": "C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\src\\main.cpp",
               "RelativeToolTip": "src\\main.cpp",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAwD8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwEIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-16T23:39:55.126Z",
               "IsPinned": true,
@@ -61,19 +61,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "InputHandler.cpp",
-              "DocumentMoniker": "C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\InputHandler.cpp",
-              "RelativeDocumentMoniker": "InputHandler.cpp",
-              "ToolTip": "C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\InputHandler.cpp",
-              "RelativeToolTip": "InputHandler.cpp",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBIAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-17T12:26:22.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "InputHandler.hpp",
               "DocumentMoniker": "C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\InputHandler.hpp",
               "RelativeDocumentMoniker": "InputHandler.hpp",
@@ -81,8 +68,7 @@
               "RelativeToolTip": "InputHandler.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-17T12:26:21.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T12:26:21.155Z"
             },
             {
               "$type": "Document",
@@ -92,27 +78,38 @@
               "RelativeDocumentMoniker": "Grid.cpp",
               "ToolTip": "C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\Grid.cpp",
               "RelativeToolTip": "Grid.cpp",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAnwIUAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAwwGgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-17T00:05:56.461Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "InputHandler.cpp",
+              "DocumentMoniker": "C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\InputHandler.cpp",
+              "RelativeDocumentMoniker": "InputHandler.cpp",
+              "ToolTip": "C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\InputHandler.cpp",
+              "RelativeToolTip": "InputHandler.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-17T12:26:22.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Grid.hpp",
               "DocumentMoniker": "C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\Grid.hpp",
               "RelativeDocumentMoniker": "Grid.hpp",
               "ToolTip": "C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\Grid.hpp",
               "RelativeToolTip": "Grid.hpp",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-17T00:01:47.994Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T00:01:47.994Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Particle.hpp",
               "DocumentMoniker": "C:\\Users\\micha\\Documents\\GameDevPortfolioFiles\\Projects\\VisualStudio\\FallingSand\\FallingSandProject\\FallingSandSimulation\\Particle.hpp",
               "RelativeDocumentMoniker": "Particle.hpp",
